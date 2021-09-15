@@ -4,25 +4,28 @@ class Ship{
   float speed = (width/110);
   float x = width/2;
   float y = height/2;
-  
+  float upgrade = 1;
   
   void display(){
     rect(x, y, 100, 100);
   }
   
   void moveRight(){
-   x += speed; 
+   x += (speed * upgrade); 
   }
   
   void moveLeft(){
-    x -= speed;
+    x -= (speed * upgrade);
   }
   void moveUp(){
-    y -= speed;
+    y -= (speed * upgrade);
   }
   
   void moveDown(){
-    y += speed;
+    y += (speed * upgrade);
   }
   
+  void upgrade(){
+    upgrade += 0.5;
+  }
 }

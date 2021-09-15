@@ -19,6 +19,9 @@ void keyPressed() {
     d = true;
     a = false;
   } 
+  if (key == ' '){
+    ship.upgrade();
+  }
 }
   void keyReleased() {
   if (key == 'w'|| key == 'W') {
