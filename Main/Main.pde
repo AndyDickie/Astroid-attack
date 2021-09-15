@@ -3,7 +3,7 @@ PImage Background;
 PImage SCLVL;
 Ship ship;
 float hw, hh;
-int lvl;
+int lvl = 1;
 //setup
 void setup(){
   fullScreen();
