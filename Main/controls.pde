@@ -1,7 +1,5 @@
 boolean w, s, a, d;
 
-
-
 void keyPressed() {
   if (key == 'w' || key == 'W') {
     w = true;

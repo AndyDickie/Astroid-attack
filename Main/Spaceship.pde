@@ -44,7 +44,7 @@ class Ship {
     if (x <= (0 - width/20)){
       x = (width + width/20);
     }
-    if (x >= (width + 0.0001 + width/20)){
+    if (x >= (width + 0.001 + width/20)){
       x = (0 - width/20);
     }
   }
