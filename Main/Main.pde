@@ -22,5 +22,5 @@ void setup(){
 void draw(){
   image(Background,width/2,height/2);
   controls();
-  ship.display();
+  ship.run();
 }

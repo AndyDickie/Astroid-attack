@@ -8,7 +8,7 @@ class Ship {
   int lvl = 1;
  
   void display(){
-    image(SCLVL,x, y,width/8,height/5);
+    image(SCLVL,x, y, width/8, height/5);
   }
 
   void moveRight() {
@@ -20,11 +20,17 @@ class Ship {
   }
 
   void moveUp() {
-    y -= (speed * upgrade);
+    if (y <= 0 + (height/15)){
+    } else{
+      y -= (speed * upgrade);
+    }
   }
 
   void moveDown() {
-    y += (speed * upgrade);
+    if (y >= (height - height/15)){
+    } else{
+      y += (speed * upgrade);
+    }
   }
 
   void upgrade() {
@@ -33,5 +39,17 @@ class Ship {
       SCLVL =loadImage("Spacecraftlvl"+lvl+".png");
       upgrade += 0.2;
     }
+  }
+  void checkBorder(){
+    if (x <= (0 - width/20)){
+      x = (width + width/20);
+    }
+    if (x >= (width + 0.0001 + width/20)){
+      x = (0 - width/20);
+    }
+  }
+  void run(){
+    ship.display();
+    ship.checkBorder();
   }
 }
