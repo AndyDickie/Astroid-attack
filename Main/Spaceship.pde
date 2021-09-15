@@ -1,9 +1,9 @@
 
 class Ship{
   int hp;
-  float speed = (width/12);
-  float x = width;
-  float y = height;
+  float speed = (width/110);
+  float x = width/2;
+  float y = height/2;
   
   
   void display(){

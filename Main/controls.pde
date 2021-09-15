@@ -1,4 +1,4 @@
-boolean w, s, a, d, up, down, left, right;
+boolean w, s, a, d;
 
 
 
