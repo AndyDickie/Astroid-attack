@@ -1,0 +1,20 @@
+//variable 
+PImage Background;
+
+
+
+
+//setup
+void setup(){
+  
+  
+}
+
+
+
+//draw
+void draw(){
+  
+  
+  
+}
