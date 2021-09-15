@@ -1,7 +1,7 @@
 
 class Ship{
   int hp;
-  float speed = (width/110);
+  float speed = (width/120);
   float x = width/2;
   float y = height/2;
   float upgrade = 1;

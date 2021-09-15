@@ -21,7 +21,4 @@ void draw(){
   image(Background,width/2,height/2);
   controls();
   ship.display();
-  println(width, height);
-  println(ship.x, ship.y);
-  
 }
