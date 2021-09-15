@@ -2,19 +2,27 @@
 class Ship{
   int hp;
   float speed, upgradespeed;
+  float x, y;
   
-  
-  Ship(speed_, ){
-    
-  }
+
   
   void display(){
-    
+    rect(x, y, 100, 100);
   }
   
-  void move(){
-    
+  void moveRight(){
+   x += speed; 
   }
   
+  void moveLeft(){
+    x -= speed;
+  }
+  void moveUp(){
+    y -= speed;
+  }
+  
+  void moveDown(){
+    y += speed;
+  }
   
 }
