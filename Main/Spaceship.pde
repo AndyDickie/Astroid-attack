@@ -5,9 +5,9 @@ class Ship{
   float x = width/2;
   float y = height/2;
   float upgrade = 1;
-  
+ 
   void display(){
-    rect(x, y, 100, 100);
+    image(SCLVL1,x, y,width/8,height/5);
   }
   
   void moveRight(){
