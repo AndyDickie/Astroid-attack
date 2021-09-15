@@ -8,7 +8,7 @@ class Ship {
 
  
   void display(){
-    image(SCLVL1,x, y,width/8,height/5);
+    image(SCLVL,x, y,width/8,height/5);
   }
 
   void moveRight() {

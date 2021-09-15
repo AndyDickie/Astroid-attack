@@ -1,18 +1,14 @@
 //variable 
 PImage Background;
-PImage SCLVL1;
-PImage SCLVL2;
-PImage SCLVL3;
+PImage SCLVL;
 Ship ship;
 float hw, hh;
-
+int lvl;
 //setup
 void setup(){
   fullScreen();
   Background = loadImage("Background.jpeg");
-  SCLVL1 =loadImage("Spacecraftlvl1.png");
-  SCLVL2 = loadImage("Spacecraftlvl2.png");
-  SCLVL3 =loadImage("Spacecraftlvl3.png");
+  SCLVL =loadImage("Spacecraftlvl"+lvl+".png");
   imageMode(CENTER);
   rectMode(CENTER);
   hw = width/2;
