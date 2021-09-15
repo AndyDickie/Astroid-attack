@@ -1,10 +1,10 @@
 
 class Ship{
   int hp;
-  float speed, upgradespeed;
-  float x, y;
+  float speed = (width/12);
+  float x = width;
+  float y = height;
   
-
   
   void display(){
     rect(x, y, 100, 100);
