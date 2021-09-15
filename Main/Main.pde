@@ -5,7 +5,7 @@
 
 //setup
 void setup(){
-  
+  fullScreen();
   
 }
 
