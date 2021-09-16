@@ -3,8 +3,8 @@ PFont font2;
 String variablequestion;
 PImage baggrund;
 int value = 0;
-String Rigtigt;
-String Forkert;
+String userAnswer;
+boolean hasAnswered;
 
 void displayQuestion() {
   image(baggrund, width/2, height/2);
@@ -17,7 +17,6 @@ void displayQuestion() {
   fill(255, 0, 0);
   rect(width-width/3, height-height/3, 400, 400);
   fill(255);
-  variablequestion ="Hej med dig";
   textFont(font);
   text(variablequestion, width/2, height/4);
   fill(0);
@@ -26,12 +25,14 @@ void displayQuestion() {
   text("False", width-width/3, height-height/3);
   mouseClicked();
   if (mouseX>width/3-200&&mouseX<width/3+200&&mouseY>height-height/3-200&&mouseY<height-height/3+200&&value==255) {
-    println(Rigtigt);
+    userAnswer = "true";
+    hasAnswered = true;
     value=0;
   }
   mouseClicked();
   if (mouseX>width-width/3-200&&mouseX<width-width/3+200&&mouseY>height-height/3-200&&mouseY<height-height/3+200&&value==255) {
-    println(Forkert);
+    userAnswer = "false";
+    hasAnswered = true;
     value=0;
   }
 }
