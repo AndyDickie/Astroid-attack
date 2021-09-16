@@ -4,7 +4,7 @@ String variablequestion;
 PImage baggrund;
 int value = 0;
 String userAnswer;
-boolean hasAnswered;
+boolean hasAnswered = false;
 
 void displayQuestion() {
   image(baggrund, width/2, height/2);
@@ -23,6 +23,7 @@ void displayQuestion() {
   textFont(font2);
   text("True", width/3, height-height/3);
   text("False", width-width/3, height-height/3);
+  
   mouseClicked();
   if (mouseX>width/3-200&&mouseX<width/3+200&&mouseY>height-height/3-200&&mouseY<height-height/3+200&&value==255) {
     userAnswer = "true";

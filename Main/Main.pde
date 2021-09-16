@@ -7,7 +7,7 @@ Table table;
 int id = 0;
 int string = 1;
 int ans = 2;
-float time;
+
 //setup
 void setup(){
   fullScreen();
@@ -31,5 +31,10 @@ void draw(){
   image(Background,width/2,height/2);
   controls();
   ship.run();
-  
-}
+  checkTime();
+  //test();
+    //print(userAnswer);
+  }
+
+    
+//}

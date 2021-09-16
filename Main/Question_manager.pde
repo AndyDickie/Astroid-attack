@@ -1,4 +1,6 @@
 Question currentQuestion;
+float time;
+boolean qtime;
 
 void refreshList() {
   table = loadTable("test.csv", "header");
@@ -19,14 +21,25 @@ void stilSpg() {
 }
 
 void checkTime() {
-  if ((time + 20*1000) > millis()) {
-    noLoop();
-    time = millis();
-    stilSpg();
-    currentQuestion.printspg();
-    while (hasAnswered == false) {
-      displayQuestion();
-      currentQuestion.tjekSvar();
+  if ((time + 10*1000) < millis()) {
+    if (qtime == false){
+      stilSpg();
+      currentQuestion.printspg();
     }
+    qtime = true;
+    test();
+    }
+  }
+
+void test() {
+  if (hasAnswered == false) {
+    displayQuestion();
+  }
+  if (hasAnswered == true) {
+    println(userAnswer);
+    currentQuestion.tjekSvar();
+    time = millis();
+    qtime = false;
+    hasAnswered = false;
   }
 }
