@@ -32,9 +32,6 @@ void draw(){
   controls();
   ship.run();
   checkTime();
-  //test();
-    //print(userAnswer);
   }
 
     
-//}

@@ -3,7 +3,7 @@ PFont font2;
 String variablequestion;
 PImage baggrund;
 int value = 0;
-String userAnswer;
+boolean userAnswer;
 boolean hasAnswered = false;
 
 void displayQuestion() {
@@ -26,13 +26,13 @@ void displayQuestion() {
   
   mouseClicked();
   if (mouseX>width/3-200&&mouseX<width/3+200&&mouseY>height-height/3-200&&mouseY<height-height/3+200&&value==255) {
-    userAnswer = "true";
+    userAnswer = true;
     hasAnswered = true;
     value=0;
   }
   mouseClicked();
   if (mouseX>width-width/3-200&&mouseX<width-width/3+200&&mouseY>height-height/3-200&&mouseY<height-height/3+200&&value==255) {
-    userAnswer = "false";
+    userAnswer = false;
     hasAnswered = true;
     value=0;
   }

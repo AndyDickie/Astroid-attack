@@ -21,7 +21,7 @@ void stilSpg() {
 }
 
 void checkTime() {
-  if ((time + 10*1000) < millis()) {
+  if ((time + 5*1000) < millis()) {
     if (qtime == false){
       stilSpg();
       currentQuestion.printspg();
@@ -37,6 +37,7 @@ void test() {
   }
   if (hasAnswered == true) {
     println(userAnswer);
+    println(currentQuestion.answer);
     currentQuestion.tjekSvar();
     time = millis();
     qtime = false;
