@@ -7,6 +7,7 @@ Table table;
 int id = 0;
 int string = 1;
 int ans = 2;
+Asteroid test;
 
 //setup
 void setup(){
@@ -22,6 +23,7 @@ void setup(){
   font2 = createFont("Skrift.vlw",75);
   time = millis();
   refreshList();
+  test = new Asteroid();
 }
 
 
@@ -32,6 +34,8 @@ void draw(){
   controls();
   ship.run();
   checkTime();
+  test.display();
+  test.update();
   }
 
     

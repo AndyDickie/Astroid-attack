@@ -21,7 +21,7 @@ void stilSpg() {
 }
 
 void checkTime() {
-  if ((time + 5*1000) < millis()) {
+  if ((time + 5000*1000) < millis()) {
     if (qtime == false){
       stilSpg();
       currentQuestion.printspg();
