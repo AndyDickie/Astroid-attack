@@ -23,6 +23,7 @@ class Question {
     //tjek for svar
     if (userAnswer == answer){
       println("korrekt");
+      coins += 1;
     } else {
       println("forkert");
       //træk point fra eller liv?
