@@ -1,6 +1,7 @@
 //variable 
 PImage Background;
 PImage SCLVL;
+PImage Coinpic;
 Ship ship;
 ArrayList<Question> list1 = new ArrayList<Question>();
 Table table;
@@ -14,6 +15,7 @@ void setup(){
   fullScreen();
   Background = loadImage("Background.jpeg");
   SCLVL =loadImage("Spacecraftlvl1.png");
+  Coinpic = loadImage("Coin.png");
   imageMode(CENTER);
   rectMode(CENTER);
   ship = new Ship();
@@ -36,6 +38,7 @@ void draw(){
   checkTime();
   test.display();
   test.update();
+  coinscount();
   }
 
     
