@@ -42,9 +42,13 @@ class AstroidManager {
     spawnAsteroids();
     removeAsteroids();
     displayAsteroids();
-    if (counter % 7 == 0 && hasAdded == false){
-      astroidCount++;
+    if (counter % 5 == 0 && hasAdded == false){
       hasAdded = true;
+    }
+    if (hasAdded == true){
+      counter++;
+      hasAdded = false;
+      astroidCount += 2;
     }
     println(astroidCount);
     println(counter);
