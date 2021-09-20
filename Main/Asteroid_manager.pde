@@ -4,6 +4,7 @@ class AstroidManager {
   int astroidCount = 1;
   int counter = 1;
   boolean hasAdded = false;
+  int lvl;
   
   void spawnAsteroids() {
     for (int i = 0; i < astroidCount && astroids.size() < astroidCount+1; i++) {
@@ -35,20 +36,19 @@ class AstroidManager {
       }
     }
   }
-
-
-
   void run() {
     spawnAsteroids();
     removeAsteroids();
     displayAsteroids();
-    if (counter % 5 == 0 && hasAdded == false){
-      hasAdded = true;
-    }
-    if (hasAdded == true){
-      counter++;
-      hasAdded = false;
-      astroidCount += 2;
+    if (astroidCount < 6 + lvl){
+      if (counter % 5 == 0 && hasAdded == false){
+        hasAdded = true;
+      }
+      if (hasAdded == true){
+        counter++;
+        hasAdded = false;
+        astroidCount += 1;
+      }
     }
     println(astroidCount);
     println(counter);

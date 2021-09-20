@@ -1,6 +1,7 @@
 Question currentQuestion;
 float time;
-boolean qtime;
+boolean questionTime, gameTime;
+
 
 void refreshList() {
   table = loadTable("test.csv", "header");
@@ -22,11 +23,11 @@ void stilSpg() {
 
 void checkTime() {
   if ((time + 5000*1000) < millis()) {
-    if (qtime == false){
+    if (questionTime == false){
       stilSpg();
       currentQuestion.printspg();
     }
-    qtime = true;
+    questionTime = true;
     test();
     }
   }
@@ -40,7 +41,7 @@ void test() {
     println(currentQuestion.answer);
     currentQuestion.tjekSvar();
     time = millis();
-    qtime = false;
+    questionTime = false;
     hasAnswered = false;
   }
 }
