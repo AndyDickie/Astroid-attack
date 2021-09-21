@@ -28,6 +28,7 @@ void checkTime() {
     gameTime = false;
     pullQuestion();
     currentQuestion.printspg();
+    ship.lvl++;
     }
   }
 
