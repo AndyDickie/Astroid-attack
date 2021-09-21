@@ -24,7 +24,6 @@ class Question {
     if (userAnswer == answer){
       println("korrekt");
       coins += 10;
-      ship.lvl++;
     } else {
       println("forkert");
       //træk point fra eller liv?
