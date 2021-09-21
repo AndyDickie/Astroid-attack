@@ -56,8 +56,9 @@ upgradescreen = loadImage("upgrades background.jpeg");
 //draw
 void draw(){
   //Ændre draw loopet til at køre "gameEngine"
- game();
-
+ //game();
+//menu.homescreen();
+menu.upgrades();
   }
 
     
