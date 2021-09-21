@@ -27,8 +27,9 @@ class Astroid {
   }
 
   void display() {
-    fill(200);
+    noFill();
     noStroke();
+    image(astroid,startpos.x,startpos.y,width/12,height/10);
     circle(startpos.x, startpos.y, 100);
   }
 

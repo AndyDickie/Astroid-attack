@@ -6,7 +6,7 @@ class Menu{
  image(startbutton2,width/2,height-height/2.7,width/3,height/10);
  image(startbutton3,width/2,height-height/4,width/5,height/12);
  image(shipstart,width/4,height/4,width/5,height/3);
- image(astroid,width-width/4,height/4,width/4,height/4);
+ image(astroid,width-width/4,height/4,width/6,height/4);
   }
   
   
