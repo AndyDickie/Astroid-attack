@@ -14,7 +14,7 @@ class Question {
   }
   
   void printspg() {
-    //println(id, question, answer);
+    println(id, question, answer);
     variablequestion = question;
     //sæt variabel til question og svar og kør funktionen som tegner spørgsmål
   }

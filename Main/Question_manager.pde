@@ -1,6 +1,7 @@
 Question currentQuestion;
 float time;
-boolean questionTime, gameTime;
+boolean questionTime;
+boolean gameTime = true;
 
 
 void refreshList() {
@@ -12,7 +13,7 @@ void refreshList() {
   }
 }
 
-void stilSpg() {
+void pullQuestion() {
   if (list1.size() > 0) {
     int randomtal = int(random(list1.size()));
     Question s = list1.get(randomtal);
@@ -22,17 +23,16 @@ void stilSpg() {
 }
 
 void checkTime() {
-  if ((time + 5000*1000) < millis()) {
-    if (questionTime == false){
-      stilSpg();
-      currentQuestion.printspg();
-    }
+  if ((time + 30*1000) < millis()) {
+    hasAnswered = false;
     questionTime = true;
-    test();
+    gameTime = false;
+    pullQuestion();
+    currentQuestion.printspg();
     }
   }
 
-void test() {
+void showQuestion() {
   if (hasAnswered == false) {
     displayQuestion();
   }
@@ -42,6 +42,7 @@ void test() {
     currentQuestion.tjekSvar();
     time = millis();
     questionTime = false;
+    gameTime = true;
     hasAnswered = false;
   }
 }

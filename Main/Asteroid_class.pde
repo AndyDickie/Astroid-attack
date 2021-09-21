@@ -27,6 +27,7 @@ class Astroid {
   }
 
   void display() {
+    fill(200);
     circle(startpos.x, startpos.y, 100);
   }
 
