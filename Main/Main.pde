@@ -48,7 +48,8 @@ baggrund =loadImage("Spørgsmåls baggrund.jpeg");
 //draw
 void draw(){
   //Ændre draw loopet til at køre "gameEngine"
- menu.homescreen();
+ //menu.homescreen();
+ game();
 
   }
 

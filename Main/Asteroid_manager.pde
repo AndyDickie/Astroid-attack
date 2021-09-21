@@ -50,7 +50,7 @@ class AstroidManager {
         hasAdded = true;
       }
       if (hasAdded == true){
-        counter++;
+        counter = 1;
         hasAdded = false;
         astroidCount += 1;
       }
