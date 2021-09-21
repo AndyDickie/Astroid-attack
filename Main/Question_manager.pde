@@ -3,7 +3,6 @@ float time;
 boolean questionTime;
 boolean gameTime = true;
 
-
 void refreshList() {
   table = loadTable("test.csv", "header");
   list1.clear();

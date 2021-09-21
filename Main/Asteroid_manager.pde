@@ -4,7 +4,6 @@ class AstroidManager {
   int astroidCount = 1;
   int counter = 1;
   boolean hasAdded = false;
-  int lvl;
   
   void spawnAsteroids() {
     for (int i = 0; i < astroidCount && astroids.size() < astroidCount+1; i++) {
@@ -36,7 +35,6 @@ class AstroidManager {
         if (b.offScreen == true) {
           astroids.remove(b);
           counter++;
-          
         }
       }
     }
@@ -45,7 +43,7 @@ class AstroidManager {
     spawnAsteroids();
     removeAsteroids();
     displayAsteroids();
-    if (astroidCount < 6 + lvl){
+    if (astroidCount < 6 + ship.lvl){
       if (counter % 5 == 0 && hasAdded == false){
         hasAdded = true;
       }
