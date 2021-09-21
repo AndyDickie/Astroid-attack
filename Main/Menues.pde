@@ -11,7 +11,11 @@ class Menu{
   
   
   void upgrades(){
-   
+  image(upgradescreen,width/2,height/2); 
+  image(startbutton2,width/2,height/4,width/3,height/8);
+  image(level1,width/4,height-height/3,width/5,height/3);
+  image(level2,width/2,height-height/3,width/5,height/3);
+  image(level3,width-width/4,height-height/3,width/5,height/3);
     
   }
   
