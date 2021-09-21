@@ -7,7 +7,7 @@ class Astroid {
   Astroid() {
     int r1 = int(random(2));
     int r2 = int(random(2));
-    int randomVel = int(random(5, 20));
+    int randomVel = int(random(5, 15));
 
     if (r1 == 0) {
       xpos = random(-500, -50);

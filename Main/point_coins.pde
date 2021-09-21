@@ -1,4 +1,5 @@
 int coins; 
+int highscore;
 
 void coinscount(){
   fill(255,255,0);
