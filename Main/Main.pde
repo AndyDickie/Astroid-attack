@@ -8,6 +8,10 @@ PImage startbutton2;
 PImage startbutton3;
 PImage shipstart;
 PImage astroid;
+PImage upgradescreen;
+PImage level1;
+PImage level2;
+PImage level3;
 Ship ship;
 ArrayList<Question> list1 = new ArrayList<Question>();
 Table table;
@@ -32,6 +36,10 @@ startbutton3 = loadImage("startup button3.png");
 shipstart = loadImage("Spacecraftlvl32.png");
 astroid = loadImage("Astroide.png");
 baggrund =loadImage("Spørgsmåls baggrund.jpeg");
+level1 = loadImage("Level1.png");
+level2 = loadImage("Level2.png");
+level3 = loadImage("Level3.png");
+upgradescreen = loadImage("upgrades background.jpeg");
   imageMode(CENTER);
   rectMode(CENTER);
   ship = new Ship();
@@ -48,7 +56,6 @@ baggrund =loadImage("Spørgsmåls baggrund.jpeg");
 //draw
 void draw(){
   //Ændre draw loopet til at køre "gameEngine"
- //menu.homescreen();
  game();
 
   }
