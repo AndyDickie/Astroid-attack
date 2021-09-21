@@ -21,7 +21,9 @@ class Menu{
   
   
   void controls(){
-   
+  image(controlsback,width/2,height/2);
+  image(startbutton3,width/2,height/6,width/2,height/6);
+  image(controlsbuttons,width/2,height/2,width/2,height/2);
     
   }
   

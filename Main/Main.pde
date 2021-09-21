@@ -12,6 +12,8 @@ PImage upgradescreen;
 PImage level1;
 PImage level2;
 PImage level3;
+PImage controlsback;
+PImage controlsbuttons;
 Ship ship;
 ArrayList<Question> list1 = new ArrayList<Question>();
 Table table;
@@ -40,6 +42,8 @@ level1 = loadImage("Level1.png");
 level2 = loadImage("Level2.png");
 level3 = loadImage("Level3.png");
 upgradescreen = loadImage("upgrades background.jpeg");
+controlsback = loadImage("Controlsback.jpeg");
+controlsbuttons = loadImage("Controlspic.png");
   imageMode(CENTER);
   rectMode(CENTER);
   ship = new Ship();
@@ -58,7 +62,8 @@ void draw(){
   //Ændre draw loopet til at køre "gameEngine"
  //game();
 //menu.homescreen();
-menu.upgrades();
+//menu.upgrades();
+menu.controls();
   }
 
     
