@@ -11,19 +11,23 @@ class Menu{
   
   
   void upgrades(){
-    
+   
     
   }
   
   
   void controls(){
-    
+   
     
   }
   
   
   void playscreen(){
-    
-    
+  image(Background,width/2,height/2);
+  controls();
+  ship.run();
+  checkTime();
+  coinscount();
+  astroidManager.run();    
   }
 }

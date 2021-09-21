@@ -15,19 +15,21 @@ int id = 0;
 int string = 1;
 int ans = 2;
 AstroidManager astroidManager;
+Menu menu;
 
 
 //setup
 void setup(){
   fullScreen();
 Background = loadImage("Background.jpeg");
+menu = new Menu();
 SCLVL =loadImage("Spacecraftlvl1.png");
 Coinpic = loadImage("Coin.png");
 startup = loadImage("Startup.jpeg");
 startbutton1 = loadImage("startup button1.png");
 startbutton2 = loadImage("startup button2.png");
 startbutton3 = loadImage("startup button3.png");
-shipstart = loadImage("Spacecraftlvl3.png");
+shipstart = loadImage("Spacecraftlvl32.png");
 astroid = loadImage("Astroide.png");
 baggrund =loadImage("Spørgsmåls baggrund.jpeg");
   imageMode(CENTER);
@@ -46,13 +48,8 @@ baggrund =loadImage("Spørgsmåls baggrund.jpeg");
 //draw
 void draw(){
   //Ændre draw loopet til at køre "gameEngine"
- 
-  //image(Background,width/2,height/2);
-  //controls();
-  //ship.run();
-  //checkTime();
-  //coinscount();
-  //astroidManager.run();
+ menu.homescreen();
+
   }
 
     
