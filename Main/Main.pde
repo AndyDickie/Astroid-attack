@@ -14,19 +14,19 @@ AstroidManager astroidManager;
 //setup
 void setup(){
   fullScreen();
-  //Background = loadImage("Background.jpeg");
-  //SCLVL =loadImage("Spacecraftlvl1.png");
-  //Coinpic = loadImage("Coin.png");
-  //imageMode(CENTER);
-  //rectMode(CENTER);
-  //ship = new Ship();
-  //baggrund =loadImage("Spørgsmåls baggrund.jpeg");
-  //textAlign(CENTER,CENTER);
-  //font = createFont("Skrift.vlw",35);
-  //font2 = createFont("Skrift.vlw",75);
-  //time = millis();
-  //refreshList();
-  //astroidManager = new AstroidManager();
+  Background = loadImage("Background.jpeg");
+  SCLVL =loadImage("Spacecraftlvl1.png");
+  Coinpic = loadImage("Coin.png");
+  imageMode(CENTER);
+  rectMode(CENTER);
+  ship = new Ship();
+  baggrund =loadImage("Spørgsmåls baggrund.jpeg");
+  textAlign(CENTER,CENTER);
+  font = createFont("Skrift.vlw",35);
+  font2 = createFont("Skrift.vlw",75);
+  time = millis();
+  refreshList();
+  astroidManager = new AstroidManager();
 }
 
 

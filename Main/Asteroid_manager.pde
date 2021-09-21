@@ -20,6 +20,7 @@ class AstroidManager {
       for (Astroid a : astroids) {
         a.display();
         a.update();
+        
       }
     }
   }
@@ -28,6 +29,10 @@ class AstroidManager {
     if (astroids.size() != 0) {
       for (int i = astroids.size()-1; i >= 0; i--) {
         Astroid b = astroids.get(i);
+        if (b.hitDetect()){
+          astroids.remove(b);
+          print(b.hit);
+        }
         if (b.offScreen == true) {
           astroids.remove(b);
           counter++;
