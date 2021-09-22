@@ -35,8 +35,7 @@ void displayQuestion() {
       userAnswer = false;
       hasAnswered = true;
       value=0;
-    }
-    else {
+    } else {
       return;
     }
   }

@@ -29,7 +29,7 @@ class Astroid {
   void display() {
     noFill();
     noStroke();
-    image(astroid,startpos.x,startpos.y,width/12,height/10);
+    image(astroid, startpos.x, startpos.y, width/12, height/10);
     circle(startpos.x, startpos.y, 100);
   }
 
@@ -54,17 +54,8 @@ class Astroid {
     float by = ship.y - height/10;
     if (startpos.x > vx && startpos.x < hx && startpos.y > by && startpos.y < ty) {
       return true;
-    } else{
+    } else {
       return false;
     }
   }
-
-
-
-
-
-
-
-
-
 }

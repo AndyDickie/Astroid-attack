@@ -4,12 +4,12 @@ class AstroidManager {
   int astroidCount = 1;
   int counter = 1;
   boolean hasAdded = false;
-  
+
   void spawnAsteroids() {
     for (int i = 0; i < astroidCount && astroids.size() < astroidCount+1; i++) {
       astroids.add(new Astroid());
     }
-    if (astroids.size() == astroidCount + 1){
+    if (astroids.size() == astroidCount + 1) {
       hasAdded = false;
     }
   }
@@ -19,7 +19,6 @@ class AstroidManager {
       for (Astroid a : astroids) {
         a.display();
         a.update();
-        
       }
     }
   }
@@ -28,7 +27,7 @@ class AstroidManager {
     if (astroids.size() != 0) {
       for (int i = astroids.size()-1; i >= 0; i--) {
         Astroid b = astroids.get(i);
-        if (b.hitDetect()){
+        if (b.hitDetect()) {
           astroids.remove(b);
           print(b.hit);
         }
@@ -43,11 +42,11 @@ class AstroidManager {
     spawnAsteroids();
     removeAsteroids();
     displayAsteroids();
-    if (astroidCount < 6 + ship.lvl){
-      if (counter % 5 == 0 && hasAdded == false){
+    if (astroidCount < 6 + ship.lvl) {
+      if (counter % 5 == 0 && hasAdded == false) {
         hasAdded = true;
       }
-      if (hasAdded == true){
+      if (hasAdded == true) {
         counter = 1;
         hasAdded = false;
         astroidCount += 1;
@@ -56,6 +55,5 @@ class AstroidManager {
     //println(astroidCount);
     //println(counter);
     //println("-");
-    
   }
 }

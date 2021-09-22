@@ -29,8 +29,8 @@ void checkTime() {
     pullQuestion();
     currentQuestion.printspg();
     ship.lvl++;
-    }
   }
+}
 
 void showQuestion() {
   if (hasAnswered == false) {

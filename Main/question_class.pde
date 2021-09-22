@@ -6,13 +6,13 @@ class Question {
   Question(int id_, String questions_, String answer_) {
     question = questions_;
     id = id_;
-    if (answer_.contains("true")){
+    if (answer_.contains("true")) {
       answer = true;
     } else {
       answer = false;
     }
   }
-  
+
   void printspg() {
     println(id, question, answer);
     variablequestion = question;
@@ -21,12 +21,12 @@ class Question {
 
   void tjekSvar() {
     //tjek for svar
-    if (userAnswer == answer){
+    if (userAnswer == answer) {
       println("korrekt");
       coins += 10;
     } else {
       println("forkert");
       //træk point fra eller liv?
     }
-  }    
+  }
 }

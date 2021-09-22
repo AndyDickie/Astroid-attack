@@ -17,17 +17,17 @@ void keyPressed() {
     d = true;
     a = false;
   } 
-  if (key == ' '){
+  if (key == ' ') {
     ship.upgrade();
   }
-  
-  if (key == 'p' && menu.state == 0){
+
+  if (key == 'p' && menu.state == 0) {
     menu.state = 1;
     gameTime = false;
     pauseTime = millis();
   }
 }
-  void keyReleased() {
+void keyReleased() {
   if (key == 'w'|| key == 'W') {
     w = false;
   }
@@ -43,18 +43,18 @@ void keyPressed() {
   }
 }
 
-void mousePressed(){
-  if (menu.state == 1 && menu.startScreen.hasClicked()){
+void mousePressed() {
+  if (menu.state == 1 && menu.startScreen.hasClicked()) {
     menu.state = 0;
     gameTime = true;
     time = (millis() - (pauseTime - time));
   }
-  
-  if (menu.state == 1 && menu.upgradeScreen.hasClicked()){
+
+  if (menu.state == 1 && menu.upgradeScreen.hasClicked()) {
     menu.state = 2;
   }
-  
-  if (menu.state == 1 && menu.controlScreen.hasClicked()){
+
+  if (menu.state == 1 && menu.controlScreen.hasClicked()) {
     menu.state = 3;
   }
 }
