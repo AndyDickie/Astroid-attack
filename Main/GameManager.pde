@@ -2,7 +2,6 @@
 
 void game() {
   if (gameTime) {
-    
     image(Background, width/2, height/2);
     controls();
     ship.run();

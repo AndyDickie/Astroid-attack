@@ -24,7 +24,7 @@ void displayQuestion() {
   text("True", width/3, height-height/3);
   text("False", width-width/3, height-height/3);
   
-  //mouseClicked();
+  if (mousePressed){
   if (mouseX>width/3-200&&mouseX<width/3+200&&mouseY>height-height/3-200&&mouseY<height-height/3+200&&value==255) {
     userAnswer = true;
     hasAnswered = true;
@@ -36,6 +36,7 @@ void displayQuestion() {
     hasAnswered = true;
     value=0;
   }
+}
 }
 
 void mouseReleased() {

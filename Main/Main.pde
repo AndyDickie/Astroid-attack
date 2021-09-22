@@ -30,7 +30,6 @@ menu = new Menu();
 SCLVL =loadImage("Spacecraftlvl1.png");
 Coinpic = loadImage("Coin.png");
 startup = loadImage("Startup.jpeg");
-
 shipstart = loadImage("Spacecraftlvl32.png");
 astroid = loadImage("Astroide.png");
 baggrund =loadImage("Spørgsmåls baggrund.jpeg");

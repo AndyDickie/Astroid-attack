@@ -1,5 +1,5 @@
 Question currentQuestion;
-float time;
+float time, pauseTime;
 boolean questionTime;
 boolean gameTime;
 
@@ -22,7 +22,7 @@ void pullQuestion() {
 }
 
 void checkTime() {
-  if ((time + 30*1000) < millis()) {
+  if ((time + 10*1000) < millis()) {
     hasAnswered = false;
     questionTime = true;
     gameTime = false;
@@ -37,8 +37,8 @@ void showQuestion() {
     displayQuestion();
   }
   if (hasAnswered == true) {
-    println(userAnswer);
-    println(currentQuestion.answer);
+    ////println(userAnswer);
+    //println(currentQuestion.answer);
     currentQuestion.tjekSvar();
     time = millis();
     questionTime = false;

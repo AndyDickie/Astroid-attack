@@ -24,6 +24,7 @@ void keyPressed() {
   if (key == 'p' && menu.state == 0){
     menu.state = 1;
     gameTime = false;
+    pauseTime = millis();
   }
 }
   void keyReleased() {
