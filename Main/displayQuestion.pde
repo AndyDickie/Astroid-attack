@@ -23,26 +23,30 @@ void displayQuestion() {
   textFont(font2);
   text("True", width/3, height-height/3);
   text("False", width-width/3, height-height/3);
-  
-  if (mousePressed){
-  if (mouseX>width/3-200&&mouseX<width/3+200&&mouseY>height-height/3-200&&mouseY<height-height/3+200&&value==255) {
-    userAnswer = true;
-    hasAnswered = true;
-    value=0;
+
+  if (mousePressed) {
+    if (mouseX>width/3-200&&mouseX<width/3+200&&mouseY>height-height/3-200&&mouseY<height-height/3+200) {
+      //&&value==255
+      userAnswer = true;
+      hasAnswered = true;
+      value=0;
+    }
+    //mouseClicked();
+    if (mouseX>width-width/3-200&&mouseX<width-width/3+200&&mouseY>height-height/3-200&&mouseY<height-height/3+200) {
+      userAnswer = false;
+      hasAnswered = true;
+      value=0;
+    }
+    else {
+      return;
+    }
   }
-  //mouseClicked();
-  if (mouseX>width-width/3-200&&mouseX<width-width/3+200&&mouseY>height-height/3-200&&mouseY<height-height/3+200&&value==255) {
-    userAnswer = false;
-    hasAnswered = true;
-    value=0;
-  }
-}
 }
 
-void mouseReleased() {
-  if (value==0) {
-    value=255;
-  } else {
-    value=0;
-  }
-}
+//void mouseReleased() {
+//  if (value==0) {
+//    value=255;
+//  } else {
+//    value=0;
+//  }
+//}
