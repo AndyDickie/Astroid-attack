@@ -49,6 +49,7 @@ PImage startbutton3;
     upgrade.display();
     control.display();
   }
+  
   void upgrades() {
     image(upgradescreen, width/2, height/2); 
     image(startbutton2, width/2, height/4, width/3, height/8);
@@ -62,14 +63,7 @@ PImage startbutton3;
     image(startbutton3, width/2, height/6, width/2, height/6);
     image(controlsbuttons, width/2, height/2, width/2, height/2);
   }
-
-
- 
-
-
-
-
-
+  
   void playscreen() {
     image(Background, width/2, height/2);
     controls();
