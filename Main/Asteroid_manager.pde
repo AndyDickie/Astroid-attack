@@ -53,9 +53,9 @@ class AstroidManager {
         astroidCount += 1;
       }
     }
-    println(astroidCount);
-    println(counter);
-    println("-");
+    //println(astroidCount);
+    //println(counter);
+    //println("-");
     
   }
 }

@@ -20,6 +20,11 @@ void keyPressed() {
   if (key == ' '){
     ship.upgrade();
   }
+  
+  if (key == 'p' && menu.state == 0){
+    menu.state = 1;
+    gameTime = false;
+  }
 }
   void keyReleased() {
   if (key == 'w'|| key == 'W') {

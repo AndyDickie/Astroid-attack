@@ -3,9 +3,7 @@ PImage Background;
 PImage SCLVL;
 PImage Coinpic;
 PImage startup;
-PImage startbutton1;
-PImage startbutton2;
-PImage startbutton3;
+
 PImage shipstart;
 PImage astroid;
 PImage upgradescreen;
@@ -32,9 +30,7 @@ menu = new Menu();
 SCLVL =loadImage("Spacecraftlvl1.png");
 Coinpic = loadImage("Coin.png");
 startup = loadImage("Startup.jpeg");
-startbutton1 = loadImage("startup button1.png");
-startbutton2 = loadImage("startup button2.png");
-startbutton3 = loadImage("startup button3.png");
+
 shipstart = loadImage("Spacecraftlvl32.png");
 astroid = loadImage("Astroide.png");
 baggrund =loadImage("Spørgsmåls baggrund.jpeg");
@@ -53,6 +49,8 @@ controlsbuttons = loadImage("Controlspic.png");
   time = millis();
   refreshList();
   astroidManager = new AstroidManager();
+  
+
 }
 
 
@@ -60,14 +58,9 @@ controlsbuttons = loadImage("Controlspic.png");
 //draw
 void draw(){
   //Ændre draw loopet til at køre "gameEngine"
- //game();
-
-//menu.upgrades();
-
-menu.homescreen();
-//menu.upgrades();
-//menu.controls();
-
+  menu.update();
+  game();
+ 
   }
 
     

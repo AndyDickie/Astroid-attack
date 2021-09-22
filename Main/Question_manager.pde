@@ -1,7 +1,7 @@
 Question currentQuestion;
 float time;
 boolean questionTime;
-boolean gameTime = true;
+boolean gameTime;
 
 void refreshList() {
   table = loadTable("test.csv", "header");
