@@ -31,7 +31,6 @@ void displayQuestion() {
       hasAnswered = true;
       value=0;
     }
-    //mouseClicked();
     if (mouseX>width-width/3-200&&mouseX<width-width/3+200&&mouseY>height-height/3-200&&mouseY<height-height/3+200) {
       userAnswer = false;
       hasAnswered = true;

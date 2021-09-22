@@ -3,9 +3,9 @@
 
 class Menu {
 int state = 1;
-Button start;
-Button upgrade;
-Button control;
+Button startScreen;
+Button upgradeScreen;
+Button controlScreen;
 PImage startbutton1;
 PImage startbutton2;
 PImage startbutton3;
@@ -14,9 +14,9 @@ PImage startbutton3;
     startbutton1 = loadImage("startup button1.png");
     startbutton2 = loadImage("startup button2.png");
     startbutton3 = loadImage("startup button3.png");
-    start = new Button(width/2, height-(height/2), (width/3), (height/10), startbutton1);
-    upgrade = new Button(width/2, height-height/2.7, width/3, height/10, startbutton2);
-    control = new Button(width/2, height-height/4, width/5, height/12, startbutton3);
+    startScreen = new Button(width/2, height-(height/2), (width/3), (height/10), startbutton1);
+    upgradeScreen = new Button(width/2, height-height/2.7, width/3, height/10, startbutton2);
+    controlScreen = new Button(width/2, height-height/4, width/5, height/12, startbutton3);
   }
   void update(){
     if (state == 0){
@@ -34,9 +34,9 @@ PImage startbutton3;
   }
   
   void homescreen() {
-    start.show = true;
-    upgrade.show = true;
-    control.show = true;
+    startScreen.show = true;
+    upgradeScreen.show = true;
+    controlScreen.show = true;
 
 
     image(startup, width/2, height/2);
@@ -45,9 +45,9 @@ PImage startbutton3;
     //image(startbutton1, width/2, height-height/2, width/3, height/10);
     //image(startbutton2, width/2, height-height/2.7, width/3, height/10);
     //image(startbutton3, width/2, height-height/4, width/5, height/12);
-    start.display();
-    upgrade.display();
-    control.display();
+    startScreen.display();
+    upgradeScreen.display();
+    controlScreen.display();
   }
   
   void upgrades() {

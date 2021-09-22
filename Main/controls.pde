@@ -43,6 +43,22 @@ void keyPressed() {
   }
 }
 
+void mousePressed(){
+  if (menu.state == 1 && menu.startScreen.hasClicked()){
+    menu.state = 0;
+    gameTime = true;
+    time = (millis() - (pauseTime - time));
+  }
+  
+  if (menu.state == 1 && menu.upgradeScreen.hasClicked()){
+    menu.state = 2;
+  }
+  
+  if (menu.state == 1 && menu.controlScreen.hasClicked()){
+    menu.state = 3;
+  }
+}
+
 void controls() {
   if (s) {
     ship.moveDown();
