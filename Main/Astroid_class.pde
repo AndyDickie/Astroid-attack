@@ -1,22 +1,28 @@
-class Astroid {
+class Astroid 
+{
   PVector vel, startpos, heading, direction;
   float xpos, ypos;
   boolean onScreen = false;
   boolean offScreen = false;
   boolean hit = false;
-  Astroid() {
+  
+  Astroid() 
+  {
     int r1 = int(random(2));
     int r2 = int(random(2));
     int randomVel = int(random(5, 15));
 
-    if (r1 == 0) {
+    if (r1 == 0) 
+    {
       xpos = random(-500, -50);
     } else {
       xpos = random(width + 50, width + 500);
     }
-    if (r2 == 0) {
+    if (r2 == 0) 
+    {
       ypos = random(-500, -50);
-    } else {
+    } else 
+    {
       ypos = random(height + 50, height + 500);
     }
     startpos = new PVector(xpos, ypos);

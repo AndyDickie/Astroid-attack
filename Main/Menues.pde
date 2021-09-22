@@ -38,9 +38,6 @@ class Menu {
     image(startup, width/2, height/2);
     image(shipstart, width/4, height/4, width/5, height/3);
     image(astroid, width-width/4, height/4, width/6, height/4);
-    //image(startbutton1, width/2, height-height/2, width/3, height/10);
-    //image(startbutton2, width/2, height-height/2.7, width/3, height/10);
-    //image(startbutton3, width/2, height-height/4, width/5, height/12);
     startScreen.display();
     upgradeScreen.display();
     controlScreen.display();
@@ -60,12 +57,12 @@ class Menu {
     image(controlsbuttons, width/2, height/2, width/2, height/2);
   }
 
-  void playscreen() {
-    image(Background, width/2, height/2);
-    controls();
-    ship.run();
-    checkTime();
-    coinscount();
-    astroidManager.run();
-  }
+  //void playscreen() {
+  //  image(Background, width/2, height/2);
+  //  controls();
+  //  ship.run();
+  //  checkTime();
+  //  coinscount();
+  //  astroidManager.run();
+  //}
 }

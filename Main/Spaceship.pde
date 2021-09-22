@@ -1,11 +1,13 @@
 
 class Ship {
-  int hp;
+  int hp = 5;
   float speed = (width/120);
   float x = width/2;
   float y = height/2;
   float upgrade = 1;
   int lvl = 1;
+  int coins; 
+  int highscore;
 
   void display() {
     image(SCLVL, x, y, width/8, height/5);
@@ -48,6 +50,20 @@ class Ship {
       x = (0 - width/20);
     }
   }
+  void deductHp(){
+    if (hp >= 2){
+      hp -= 1;
+      //println(hp);
+    } else{
+      println("Game Over, you got", highscore/10, "points");
+      menu.state = 1;
+      loadObjects();
+      gameTime = false;
+      //exit();
+    }
+  }
+  
+  
   void run() {
     ship.display();
     ship.checkBorder();

@@ -22,7 +22,7 @@ void pullQuestion() {
 }
 
 void checkTime() {
-  if ((time + 30*1000) < millis()) {
+  if ((time + 3*1000) < millis()) {
     hasAnswered = false;
     questionTime = true;
     gameTime = false;

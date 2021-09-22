@@ -23,15 +23,20 @@ class AstroidManager {
     }
   }
 
-  void removeAsteroids() {
-    if (astroids.size() != 0) {
-      for (int i = astroids.size()-1; i >= 0; i--) {
+  void removeAsteroids() 
+  {
+    if (astroids.size() != 0) 
+    {
+      for (int i = astroids.size()-1; i >= 0; i--) 
+      {
         Astroid b = astroids.get(i);
-        if (b.hitDetect()) {
+        if (b.hitDetect()) 
+        {
           astroids.remove(b);
-          print(b.hit);
+          ship.deductHp();
         }
-        if (b.offScreen == true) {
+        if (b.offScreen == true) 
+        {
           astroids.remove(b);
           counter++;
         }

@@ -14,7 +14,7 @@ class Question {
   }
 
   void printspg() {
-    println(id, question, answer);
+    //println(id, question, answer);
     variablequestion = question;
     //sæt variabel til question og svar og kør funktionen som tegner spørgsmål
   }
@@ -22,11 +22,12 @@ class Question {
   void tjekSvar() {
     //tjek for svar
     if (userAnswer == answer) {
-      println("korrekt");
-      coins += 10;
+      //println("korrekt");
+      ship.coins += 10;
     } else {
-      println("forkert");
+      //println("forkert");
       //træk point fra eller liv?
     }
   }
 }
+  
