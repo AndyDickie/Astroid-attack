@@ -17,7 +17,9 @@ class Menu {
   }
   void update() {
     if (state == 0) {
-      return;
+      //return;
+      //playscreen();
+      game();
     }
     if (state == 1) {
       homescreen();
@@ -26,7 +28,7 @@ class Menu {
       upgrades();
     }
     if (state == 3) {
-      controls();
+      controlScreen();
     }
   }
 
@@ -49,20 +51,28 @@ class Menu {
     image(level1, width/4, height-height/3, width/5, height/3);
     image(level2, width/2, height-height/3, width/5, height/3);
     image(level3, width-width/4, height-height/3, width/5, height/3);
+    //text(
   }
 
-  void controls() {
+  void controlScreen() {
     image(controlsback, width/2, height/2);
     image(controlBotton, width/2, height/6, width/2, height/6);
     image(controlsbuttons, width/2, height/2, width/2, height/2);
   }
+  
+  void game() {
+    if (gameTime) {
+      image(Background, width/2, height/2);
+      ship.highscore++;
+      controls();
+      ship.run();
+      checkTime();
+      coinscount();
+      astroidManager.run();
+    }
 
-  //void playscreen() {
-  //  image(Background, width/2, height/2);
-  //  controls();
-  //  ship.run();
-  //  checkTime();
-  //  coinscount();
-  //  astroidManager.run();
-  //}
+    if (questionTime) {
+      showQuestion();
+    }
+  }
 }

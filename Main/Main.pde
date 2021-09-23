@@ -33,6 +33,8 @@ void setup() {
   font2 = createFont("Skrift.vlw", 75);
   time = millis();
   refreshList();
+  smooth();
+  frameRate(60);
   
 }
 
@@ -42,5 +44,5 @@ void setup() {
 void draw() {
   //Ændre draw loopet til at køre "gameEngine"
   menu.update();
-  game();
+  //game();
 }
