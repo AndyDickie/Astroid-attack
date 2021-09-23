@@ -30,6 +30,9 @@ class Menu {
     if (state == 3) {
       controlScreen();
     }
+    if (state == 4) {
+      gameOver();
+    }
   }
 
   void homescreen() {
@@ -73,6 +76,15 @@ class Menu {
 
     if (questionTime) {
       showQuestion();
+    }
+  }
+  
+  void gameOver(){
+    image(Background, width/2, height/2);
+    text("Game Over, you got " + ship.highscore/10 + " points", width/2, height/2);
+    if (ship.deathTime + 3*1000 < millis()){
+      state = 1;
+      loadObjects();
     }
   }
 }

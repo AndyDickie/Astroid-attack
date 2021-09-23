@@ -8,7 +8,8 @@ class Ship {
   int lvl = 1;
   int coins; 
   int highscore;
-
+  int deathTime;
+  
   void display() {
     image(SCLVL, x, y, width/8, height/5);
   }
@@ -55,10 +56,10 @@ class Ship {
       hp -= 1;
       //println(hp);
     } else{
-      println("Game Over, you got", highscore/10, "points");
-      menu.state = 1;
-      loadObjects();
-      gameTime = false;
+      deathTime = millis();
+      menu.state = 4;
+      //loadObjects();
+      //gameTime = false;
       //exit();
     }
   }
