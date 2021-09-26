@@ -47,7 +47,7 @@ class AstroidManager {
     spawnAsteroids();
     removeAsteroids();
     displayAsteroids();
-    if (astroidCount < 6 + ship.lvl) {
+    if (astroidCount < (6 + (ship.lvl * 2))) {
       if (counter % 5 == 0 && hasAdded == false) {
         hasAdded = true;
       }
@@ -57,8 +57,5 @@ class AstroidManager {
         astroidCount += 1;
       }
     }
-    //println(astroidCount);
-    //println(counter);
-    //println("-");
   }
 }

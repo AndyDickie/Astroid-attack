@@ -19,11 +19,11 @@ class Question {
     //sæt variabel til question og svar og kør funktionen som tegner spørgsmål
   }
 
-  void tjekSvar() {
+  void checkAnswer() {
     //tjek for svar
     if (userAnswer == answer) {
       //println("korrekt");
-      ship.coins += 10;
+      ship.coins += 25;
     } else {
       //println("forkert");
       //træk point fra eller liv?

@@ -37,14 +37,8 @@ void keyPressed() {
       a = false;
     }
   }
-  
-  if (key == ' ') {
-    //ship.upgrade();
-    gameTime = false;
-    loadObjects();
-  }
 
-  if (key == 'p' && menu.state == 0) {
+  if ((key == 'p' || key == 'P') && menu.state == 0) {
     menu.state = 1;
     gameTime = false;
     pauseTime = millis();
@@ -99,6 +93,19 @@ void mousePressed() {
   
   if ((menu.state == 2 || menu.state == 3) && menu.backButton.hasClicked()){
     menu.state = 1;
+  }
+  
+  if (menu.state == 2 && menu.level2Button.hasClicked() && ship.coins >= 100){
+    ship.lvl = 2;
+    SCLVL =loadImage("Spacecraftlvl"+ship.lvl+".png");
+    ship.coins -= 100;
+    
+  }
+  if (menu.state == 2 && menu.level3Button.hasClicked() && ship.coins >= 200){
+    ship.lvl = 3;
+    SCLVL =loadImage("Spacecraftlvl"+ship.lvl+".png");
+    ship.coins -= 200;
+    
   }
 }
 

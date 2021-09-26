@@ -14,9 +14,9 @@ void refreshList() {
 
 void pullQuestion() {
   if (list1.size() > 0) {
-    int randomtal = int(random(list1.size()));
-    Question s = list1.get(randomtal);
-    list1.remove(randomtal);
+    int randomInt = int(random(list1.size()));
+    Question s = list1.get(randomInt);
+    list1.remove(randomInt);
     currentQuestion = s;
   }
 }
@@ -28,7 +28,6 @@ void checkTime() {
     gameTime = false;
     pullQuestion();
     currentQuestion.printspg();
-    ship.lvl++;
   }
 }
 
@@ -37,9 +36,7 @@ void showQuestion() {
     displayQuestion();
   }
   if (hasAnswered == true) {
-    ////println(userAnswer);
-    //println(currentQuestion.answer);
-    currentQuestion.tjekSvar();
+    currentQuestion.checkAnswer();
     time = millis();
     questionTime = false;
     gameTime = true;

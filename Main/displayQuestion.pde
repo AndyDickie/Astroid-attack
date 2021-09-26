@@ -40,11 +40,3 @@ void displayQuestion() {
     }
   }
 }
-
-//void mouseReleased() {
-//  if (value==0) {
-//    value=255;
-//  } else {
-//    value=0;
-//  }
-//}
