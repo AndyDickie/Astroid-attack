@@ -96,6 +96,10 @@ void mousePressed() {
   if (menu.state == 1 && menu.controlScreen.hasClicked()) {
     menu.state = 3;
   }
+  
+  if ((menu.state == 2 || menu.state == 3) && menu.backButton.hasClicked()){
+    menu.state = 1;
+  }
 }
 
 void controls() {

@@ -3,6 +3,7 @@ class Menu {
   Button startScreen;
   Button upgradeScreen;
   Button controlScreen;
+  Button backButton;
   PImage startButton;
   PImage upgradeButton;
   PImage controlBotton;
@@ -14,6 +15,8 @@ class Menu {
     startScreen = new Button(width/2, height-(height/2), (width/3), (height/10), startButton);
     upgradeScreen = new Button(width/2, height-height/2.7, width/3, height/10, upgradeButton);
     controlScreen = new Button(width/2, height-height/4, width/5, height/12, controlBotton);
+    backButton = new Button(width/10, height/10, width/5, height/10, null); 
+     
   }
   void update() {
     if (state == 0) {
@@ -54,23 +57,32 @@ class Menu {
     image(level1, width/4, height-height/3, width/5, height/3);
     image(level2, width/2, height-height/3, width/5, height/3);
     image(level3, width-width/4, height-height/3, width/5, height/3);
-    //text(
+    textSize(100);
+    text("Back", width/10, height/10);
   }
 
   void controlScreen() {
     image(controlsback, width/2, height/2);
     image(controlBotton, width/2, height/6, width/2, height/6);
     image(controlsbuttons, width/2, height/2, width/2, height/2);
+    textSize(100);
+    text("Back", width/10, height/10);
   }
   
   void game() {
     if (gameTime) {
       image(Background, width/2, height/2);
+      fill(255, 255, 0);
+      textSize(50);
+      image(Coinpic, width-width/12+75, height/10+4, width/22, height/14);
+      text(ship.coins, width-width/12, height/10);
+      text(int(ship.highscore/10), width/12, height/10);
+  //text(int(ship.hp)
       ship.highscore++;
       controls();
       ship.run();
       checkTime();
-      coinscount();
+      //coinscount();
       astroidManager.run();
     }
 
@@ -81,7 +93,7 @@ class Menu {
   
   void gameOver(){
     image(Background, width/2, height/2);
-    text("Game Over, you got " + ship.highscore/10 + " points", width/2, height/2);
+    text("Game over, you got " + ship.highscore/10 + " points", width/2, height/2);
     if (ship.deathTime + 3*1000 < millis()){
       state = 1;
       loadObjects();
