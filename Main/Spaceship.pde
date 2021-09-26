@@ -47,7 +47,6 @@ class Ship {
   void deductHp(){
     if (hp >= 2){
       hp -= 1;
-
     } else{
       deathTime = millis();
       menu.state = 4;

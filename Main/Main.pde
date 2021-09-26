@@ -34,11 +34,8 @@ void setup() {
   time = millis();
   refreshList();
   smooth();
-  frameRate(60);
-  
+  frameRate(60); 
 }
-
-
 
 //draw
 void draw() {
