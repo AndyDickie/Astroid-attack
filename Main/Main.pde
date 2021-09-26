@@ -39,7 +39,5 @@ void setup() {
 
 //draw
 void draw() {
-  //Ændre draw loopet til at køre "gameEngine"
   menu.update();
-  //game();
 }
