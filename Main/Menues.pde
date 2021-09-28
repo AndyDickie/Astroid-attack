@@ -75,9 +75,8 @@ class Menu {
     image(controlsbuttons, width/2, height/2, width/2, height/2);
     textSize(100);
     text("Back", width/10, height/10);
-    textSize(30);
-    text("Go back to the start screen by pressing p", width/2, height-height/12);
     textSize(50);
+    text("Go back to the start screen by pressing p", width/2, height-height/12);
   }
   
   void game() {

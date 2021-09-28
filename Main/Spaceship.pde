@@ -1,12 +1,12 @@
 
 class Ship {
   int hp = 5;
-  float speed = (width/200);
+  float speed = (width/175);
   float x = width/2;
   float y = height/2;
   float upgrade = 0.2;
   int lvl = 1;
-  int coins; 
+  int coins = 200; 
   int highscore;
   int deathTime;
   

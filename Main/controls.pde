@@ -1,4 +1,5 @@
 boolean w, s, a, d;
+boolean upgradeFix = false;
 
 void keyPressed() {
   if (key == 'w' || key == 'W') {
@@ -77,14 +78,27 @@ void keyReleased() {
 }
 
 void mousePressed() {
+  if (menu.state == 2 && menu.level2Button.hasClicked() && ship.coins >= 100 && upgradeFix == true){
+    ship.lvl = 2;
+    SCLVL =loadImage("Spacecraftlvl"+ship.lvl+".png");
+    ship.coins -= 100;
+  }
+  
+  if (menu.state == 2 && menu.level3Button.hasClicked() && ship.coins >= 200){
+    ship.lvl = 3;
+    SCLVL =loadImage("Spacecraftlvl"+ship.lvl+".png");
+    ship.coins -= 200;
+  }
+  
   if (menu.state == 1 && menu.startScreen.hasClicked()) {
     menu.state = 0;
     gameTime = true;
     time = (millis() - (pauseTime - time));
   }
-
+  
   if (menu.state == 1 && menu.upgradeScreen.hasClicked()) {
     menu.state = 2;
+    upgradeFix = true;
   }
 
   if (menu.state == 1 && menu.controlScreen.hasClicked()) {
@@ -95,18 +109,7 @@ void mousePressed() {
     menu.state = 1;
   }
   
-  if (menu.state == 2 && menu.level2Button.hasClicked() && ship.coins >= 100){
-    ship.lvl = 2;
-    SCLVL =loadImage("Spacecraftlvl"+ship.lvl+".png");
-    ship.coins -= 100;
-    
-  }
-  if (menu.state == 2 && menu.level3Button.hasClicked() && ship.coins >= 200){
-    ship.lvl = 3;
-    SCLVL =loadImage("Spacecraftlvl"+ship.lvl+".png");
-    ship.coins -= 200;
-    
-  }
+  
 }
 
 void controls() {
