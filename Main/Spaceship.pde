@@ -6,7 +6,7 @@ class Ship {
   float y = height/2;
   float upgrade = 0.2;
   int lvl = 1;
-  int coins = 200; 
+  int coins; 
   int highscore;
   int deathTime;
   
