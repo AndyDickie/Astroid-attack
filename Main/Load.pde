@@ -14,9 +14,9 @@ void loadImages(){
   controlsbuttons = loadImage("Controlspic.png");
 }
 
-void loadObjects(){
+void loadObjects(int s, String user_){
   astroidManager = new AstroidManager();
-  menu = new Menu();
+  menu = new Menu(s, user_);
   ship = new Ship();
   list1 = new ArrayList<Question>();
   refreshList();

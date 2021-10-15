@@ -109,6 +109,14 @@ void mousePressed() {
     menu.state = 1;
   }
   
+  if (menu.state == 1 && menu.logoutButton.hasClicked()){
+    background(0);
+    displayButtons();
+    username_field.setText("");
+    pass_field.setText("");
+    loadObjects(5, "");
+  }
+  
   
 }
 

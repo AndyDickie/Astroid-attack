@@ -1,15 +1,23 @@
 class Menu {
-  int state = 1;
+  int state = 5;
   Button startScreen;
   Button upgradeScreen;
   Button controlScreen;
-  Button backButton;
+  Button backButton, logoutButton;
   Button level1Button, level2Button, level3Button;
   PImage startButton;
   PImage upgradeButton;
   PImage controlBotton;
+  ControlP5 cp5;
+  Textfield pass_field, username_field;
+  Bang show_password, create_user, login; 
+  String user;
+  int highscore, globalHighscore;
 
-  Menu() {
+
+  Menu(int screenState_, String user_) {
+    state = screenState_;
+    user = user_;
     startButton = loadImage("startup button1.png");
     upgradeButton = loadImage("startup button2.png");
     controlBotton = loadImage("startup button3.png");
@@ -17,10 +25,12 @@ class Menu {
     upgradeScreen = new Button(width/2, height-height/2.7, width/3, height/10, upgradeButton);
     controlScreen = new Button(width/2, height-height/4, width/5, height/12, controlBotton);
     backButton = new Button(width/10, height/10, width/5, height/10, null); 
+    logoutButton = new Button(width-width/10, height/10, width/5, height/10, null);
     level1Button = new Button(width/4, height-height/3, width/5, height/3, level1);
     level2Button = new Button(width/2, height-height/3, width/5, height/3, level2);
-    level3Button = new Button(width-width/4, height-height/3, width/5, height/3, level3);     
+    level3Button = new Button(width-width/4, height-height/3, width/5, height/3, level3); 
   }
+  
   void update() {
     if (state == 0) {
       //return;
@@ -39,6 +49,9 @@ class Menu {
     if (state == 4) {
       gameOver();
     }
+    if (state == 5) {
+      loginScreen();
+    }
   }
 
   void homescreen() {
@@ -52,6 +65,12 @@ class Menu {
     startScreen.display();
     upgradeScreen.display();
     controlScreen.display();
+    textSize(50);
+    text("Logout", width-width/10, height/10);
+    textMode(LEFT);
+    textSize(20);
+    text(user+ " highscore: " + getHighscore(user), width/10, height/10);
+    text("All time highscore: " + getGlobalHighscore(), width/10, height/10+50);
   }
 
   void upgrades() {
@@ -78,7 +97,7 @@ class Menu {
     textSize(50);
     text("Go back to the start screen by pressing p", width/2, height-height/12);
   }
-  
+
   void game() {
     if (gameTime) {
       image(Background, width/2, height/2);
@@ -102,13 +121,22 @@ class Menu {
       showQuestion();
     }
   }
-  
-  void gameOver(){
+
+  void gameOver() {
     image(Background, width/2, height/2);
+    textSize(50);
     text("Game over, you got " + ship.highscore/10 + " points", width/2, height/2);
-    if (ship.deathTime + 3*1000 < millis()){
+    if (ship.highscore/10 > getHighscore(user)){
+      insertHighscore(user, ship.highscore/10);
+    }
+    if (ship.deathTime + 3*1000 < millis()) {
+      loadObjects(1, user);
       state = 1;
-      loadObjects();
     }
   }
+
+  void loginScreen() {
+    textSize(50);
+    text("Astroid Attack", width/2, height/2-260);
+    }
 }
