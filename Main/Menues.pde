@@ -136,6 +136,7 @@ class Menu {
   }
 
   void loginScreen() {
+    //Knapperne og tekstfelterne bliver aktive når dette menu state er aktiv, derfor bliver der ikke kørt noget særligt i funktionen
     textSize(50);
     text("Astroid Attack", width/2, height/2-260);
     }
